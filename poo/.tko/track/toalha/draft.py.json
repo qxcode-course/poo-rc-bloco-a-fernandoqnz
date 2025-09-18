@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-18_17-25-29",
+            "content": "@@ -284,22 +284,21 @@\n %C3%A9:%7Btowel\n-.color\n+, %22P%22\n %7D%22)%0A    \n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-09-18_17-26-13",
+            "content": "@@ -303,25 +303,16 @@\n        %0A        \n-%0A        \n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-09-18_17-27-54",
+            "content": "@@ -139,29 +139,8 @@\n =0%0A%0A\n-%0A        #refencias %0A\n     \n@@ -304,16 +304,24 @@\n       %0A        %0A\n+        \n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-09-18_17-37-56",
+            "content": "@@ -328,14 +328,13 @@\n    %0A        \n- \n %0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-09-18_17-44-01",
+            "content": "@@ -136,16 +136,24 @@\n int=0%0A%0A%0A\n+        \n #refenci\n@@ -156,16 +156,24 @@\n encias %0A\n+        \n print( %22\n@@ -199,16 +199,24 @@\n oalha%22)%0A\n+        \n color=in\n@@ -221,16 +221,24 @@\n input()%0A\n+        \n towel: T\n@@ -260,16 +260,24 @@\n or,%22P%22)%0A\n+        \n print(f%22\n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-09-18_18-34-36",
+            "content": "class Towel:\n    def __init__(self, color:str, size:str):\n        self.color:str=color\n        self.size:str=size\n        self.wetness:int=0\n\n\n#refencias \nprint( \"qual a cor da sua toalha\")\ncolor=input()\ntowel: Towel= Towel(color,\"P\")\nprint(f\" a cor da sua toalha \u00e9:{towel.color}\")\n        \n         \n",
+            "lines": "14"
+        }
+    ]
+}
