@@ -4,11 +4,50 @@ class Towel:
         self.size:str=size
         self.wetness:int=0
 
+    def getMaxWetness(self)->int:
+        if self.size== "P":
+            return 10
+        if self.size=="M":
+            return 20
+        if self.size=="G":
+            return 30
+        return 0
+    
+    def dry(self, amount:int)-> None:
+        self.wetness += amount
+        if self.wetness > self.getMaxWetness():
+            print("Toalha encharcada")
+            self.wetness=self.getMaxWetness()
 
-#refencias 
-print( "qual a cor da sua toalha")
-color=input()
-towel: Towel= Towel(color,"P")
-print(f" a cor da sua toalha é:{towel.color}")
-        
-         
+    def wringOut(self)-> None:
+        self.wetness = 0
+
+    def isDry(self) -> bool:
+        return self.wetness == 0
+    
+    def show(self) -> None:
+        print(self)
+    def __str__(self) -> str:
+        return f"{self.color} {self.size} {self.wetness}"
+    
+#testes 
+towel = Towel ("Azul", "P")
+towel.show()     
+towel.dry(5)
+towel.show()
+
+print(towel.isDry())
+
+towel.dry(5)
+towel.show()
+towel.dry(5)
+towel.show()
+
+towel.wringOut()
+towel.show()
+towel=Towel ("verde", "G")
+print(towel.isDry())
+towel.dry(30)
+towel.show()
+print(towel.isDry())
+towel.dry(1)

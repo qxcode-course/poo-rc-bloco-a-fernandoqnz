@@ -27,8 +27,13 @@
         },
         {
             "label": "2025-09-18_18-34-36",
-            "content": "class Towel:\n    def __init__(self, color:str, size:str):\n        self.color:str=color\n        self.size:str=size\n        self.wetness:int=0\n\n\n#refencias \nprint( \"qual a cor da sua toalha\")\ncolor=input()\ntowel: Towel= Towel(color,\"P\")\nprint(f\" a cor da sua toalha \u00e9:{towel.color}\")\n        \n         \n",
+            "content": "@@ -139,717 +139,157 @@\n =0%0A%0A\n-    def getMaxWetness(self)-%3Eint:%0A        if self.size== %22P%22:%0A            return 10%0A        if self.size==%22M%22:%0A            return 20%0A        if self.size==%22G%22:%0A            return 30%0A        return 0%0A    %0A    def dry(self, amount:int)-%3E None:%0A        self.wetness += amount%0A        if self.wetness %3E self.getMaxWetness():%0A            print(%22Toalha encharcada%22)%0A            self.wetness=self.getMaxWetness()%0A%0A    def wringOut(self)-%3E None:%0A        self.wetness = 0%0A%0A    def isDry(self) -%3E None:%0A        self.wetness%0A    %0A    def show(self) -%3E None:%0A        print(self)%0A    def __str__(self) -%3E str:%0A        return f%22%7Bs\n+%0A#refencias %0Aprint( %22qual a cor da sua toalha%22)%0Acolor=input()%0Atowel: Towel= Towel(color,%22P%22)%0Aprint(f%22 a cor da sua toalha %C3%A9:%7Btow\n el\n-f\n .color%7D\n- %7Bself.size%7D %7Bself.wetness%7D%22%0A    %0A#testes %0Atowel = Towel (%22azul%22, %22P%22)%0Atowel.show()\n+%22)%0A        %0A\n     \n",
             "lines": "14"
+        },
+        {
+            "label": "2025-09-20_14-14-05",
+            "content": "class Towel:\n    def __init__(self, color:str, size:str):\n        self.color:str=color\n        self.size:str=size\n        self.wetness:int=0\n\n    def getMaxWetness(self)->int:\n        if self.size== \"P\":\n            return 10\n        if self.size==\"M\":\n            return 20\n        if self.size==\"G\":\n            return 30\n        return 0\n    \n    def dry(self, amount:int)-> None:\n        self.wetness += amount\n        if self.wetness > self.getMaxWetness():\n            print(\"Toalha encharcada\")\n            self.wetness=self.getMaxWetness()\n\n    def wringOut(self)-> None:\n        self.wetness = 0\n\n    def isDry(self) -> None:\n        self.wetness\n    \n    def show(self) -> None:\n        print(self)\n    def __str__(self) -> str:\n        return f\"{self.color} {self.size} {self.wetness}\"\n    \n#testes \ntowel = Towel (\"azul\", \"P\")\ntowel.show()         \n",
+            "lines": "35"
         }
     ]
 }
