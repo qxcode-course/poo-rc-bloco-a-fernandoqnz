@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-30_13-26-38",
+            "content": "@@ -680,151 +680,8 @@\n d%0A%0A%0A\n-def main():%0A    while(True):%0A        line:str = input()%0A        args:list%5Bstr%5D = line.split(%22 %22)%0A%0A        if args%5B0%5D== %22show%22:%0A            print()%0A\n+    \n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-09-30_13-46-46",
+            "content": "class Animal():\n    def __init__(self, species: str, sound: str):\n        self.species:str=species\n        self.sound:str=sound\n        self.age:int=0\n\n\n    def __str__(self) -> str:\n        return (f\"{self.species}:{self.age}:{self.sound} morreu.\")\n    \n    def ageBy(self, increment:int):\n        if self.age==4:\n            return(f\"{Warning:self.species} morreu.\")\n        \n        self.age += increment\n        if self.age >= 4:\n            self.age = 4\n            return(f\"{Warning:self.species} morreu.\")\n            \n    def makeSound(self):\n        if self.age==0:\n            return(\"---\")\n        if self.age==4:\n            return(\"morreu.\")\n        return self.sound\n\n\ndef main():\n    while(True):\n        line:str = input()\n        args:list[str] = line.split(\" \")\n\n        if args[0]== \"show\":\n            print()\n",
+            "lines": "34"
+        }
+    ]
+}

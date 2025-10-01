@@ -24,5 +24,20 @@ class Animal():
             return("morreu.")
         return self.sound
 
-        
-    
+
+def main():
+    animal: Animal = Animal("", "")
+    while True:
+
+        line: str = input() # 4: perguntar ao usuario
+        print("$" + line) # echo
+        args: list[str] = line.split(" ") # 5: separar argumentos
+
+        if args[0]== "end":
+            break
+        elif args[0]=="criar":
+            species:  str=args[1]
+            sound: str=args[2]
+            age: str=args[3]
+            animal= Animal(species, sound, age)
+
