@@ -1,29 +1,29 @@
 class Towel:
     def __init__(self, color: str, size: str):  # construtor
-        self.color: str = color  # atributos
+        self.color: str = color
         self.size: str = size
         self.wetness: int = 0
 
-    def dry(self, amount: int) -> None:
+    def dry(self, amount: int) -> None:  # aumenta a umidade
         self.wetness += amount
-        if self.wetness >= self.isMaxWetness():
-            self.wetness = self.isMaxWetness()
+        if self.wetness >= self.getMaxWetness():
+            self.wetness = self.getMaxWetness()
             print("toalha encharcada")
 
-    def isDry(self):
+    def isDry(self) -> bool:
         return self.wetness == 0
 
-    def wringOut(self):
+    def wringOut(self) -> None:  # torcer
         self.wetness = 0
 
-    def isMaxWetness(self) -> int:
+    def getMaxWetness(self) -> int:
         if self.size == "P":  # early return
             return 10
         if self.size == "M":
             return 20
         if self.size == "G":
             return 30
-        return 0  # default return
+        return 0
 
     def show(self) -> None:
         print(f"{self.color} {self.size} {self.wetness}")
@@ -33,16 +33,15 @@ class Towel:
 
 
 def main():
-    towel: Towel = Towel("", "")  # 2: criar um obj com qq valor inicial
-    while True:  # 3: loop infinito
-
-        line: str = input()  # 4: perguntar ao usuario
-        print("$" + line)  # echo
-        args: list[str] = line.split(" ")  # 5: separar argumentos
+    towel: Towel = Towel("", "")
+    while True:
+        line: str = input()
+        print("$" + line)
+        args: list[str] = line.split(" ")
 
         if args[0] == "end":
             break
-        elif args[0] == "criar":  # color size
+        elif args[0] == "criar":  # criar cor tamanho
             color: str = args[1]
             size: str = args[2]
             towel = Towel(color, size)
@@ -55,8 +54,9 @@ def main():
             towel.dry(amount)
         elif args[0] == "mostrar":
             print(towel)
-        else:  # 7: erro
+        else:
             print("fail: comando não encontrado")
 
 
+if __name__ == "__main__":
     main()
