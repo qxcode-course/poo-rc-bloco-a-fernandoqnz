@@ -25,19 +25,28 @@ class Animal():
         return self.sound
 
 
-def main():
-    animal: Animal = Animal("", "")
-    while True:
+    def main():
+        animal : Animal= Animal("", "")
+        while True:
 
-        line: str = input() # 4: perguntar ao usuario
-        print("$" + line) # echo
-        args: list[str] = line.split(" ") # 5: separar argumentos
+            line: str = input()
+            print("$"+ line)
+            args:list[str] = line.split(" ")
 
-        if args[0]== "end":
-            break
-        elif args[0]=="criar":
-            species:  str=args[1]
-            sound: str=args[2]
-            age: str=args[3]
-            animal= Animal(species, sound, age)
+            if args[0]== "end":
+                break
+            elif args[0]== "criar":
+                species: str=args[1]
+                sound: str=args[2]
+                age: str=args[3]
+                animal = Animal(species, sound, age)
+            elif args[0]=="grow":
+                print(animal.makeSound)
+            elif args[0] == "age":
+                print(animal.ageBy)
+            elif args[0] == "mostrar":
+                print("f{self.species}:{self.sound}:{self.age}")
+            else:
+                print("comando nao encontardo")
+
 

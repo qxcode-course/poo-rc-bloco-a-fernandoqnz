@@ -28,7 +28,7 @@ class Towel:
     def show(self) -> None:
         print(f"{self.color} {self.size} {self.wetness}")
 
-    def str(self) -> str:  # toString
+    def __str__(self) -> str:  # toString
         return f"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}"
 
 
